@@ -1,0 +1,19 @@
+[project]
+name = "autograde"
+version = "0.1.0"
+description = "Validate git repository conditions for AUTOGRADE specs."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pytest>=8.4.2",
+]
+
+[project.scripts]
+autograde = "autograde.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["autograde*"]
